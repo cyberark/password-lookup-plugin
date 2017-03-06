@@ -53,7 +53,7 @@ Example playbook showing how to retrieve credentials from CyberArk Digital Vault
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
