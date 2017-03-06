@@ -5,6 +5,8 @@ cyberarkpassword lookup plugin to retrieve credentials from Cyberark digital Vau
 
 For Ansible on windows, please change the -parameters (-p, -d, and -o) to /parameters (/p, /d, and /o) and change the location of CLIPasswordSDK.exe
 
+**Note**: To use the plugin if not part of core ansible, please edit your ansible.cfg to include the following path /etc/ansible/roles/enunez-cyberark.cyberark_password_lookup_plugin/lookup_plugins
+
 
 Requirements
 ------------
