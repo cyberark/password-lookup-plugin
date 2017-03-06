@@ -5,7 +5,7 @@ cyberarkpassword lookup plugin to retrieve credentials from Cyberark digital Vau
 
 For Ansible on windows, please change the -parameters (-p, -d, and -o) to /parameters (/p, /d, and /o) and change the location of CLIPasswordSDK.exe
 
-**Note**: To use the plugin if not part of core ansible, please edit your ansible.cfg to include the following path /etc/ansible/roles/enunez-cyberark.cyberark_password_lookup_plugin/lookup_plugins
+**Note**: To use the plugin if not part of core ansible, please edit your ansible.cfg to include in lookup_plugins the following path /etc/ansible/roles/enunez-cyberark.cyberark_password_lookup_plugin/lookup_plugins
 
 
 Requirements
@@ -18,9 +18,9 @@ plugin arguments
 ----------------
 
 **Note**: Parameter names AppID, Query, Output are case sensitive.
-- AppID (str): Defines the unique ID of the application that is issuing the password request.
-- Query (str): Describes the filter criteria for the password retrieval.
-- Output (str): Specifies the desired output fields separated by commas. They could be: Password, PassProps.<property>, PasswordChangeInProcess
+- **AppID** (str): Defines the unique ID of the application that is issuing the password request.
+- **Query** (str): Describes the filter criteria for the password retrieval.
+- **Output** (str): Specifies the desired output fields separated by commas. They could be: Password, PassProps.<property>, PasswordChangeInProcess
 
 Optionally, you can specify extra parameters recognized by clipasswordsdk (like FailRequestOnPasswordChange, Queryformat, Reason, etc.)
 
