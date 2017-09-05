@@ -1,7 +1,14 @@
 ---
 - hosts: localhost
-  vars:
-   - password_object: "{{lookup('cyberarkpassword', AppID='app_ansible', Query='safe=CyberArk_Passwords;folder=root;object=AdminPass', Output='Password,PassProps.UserName,PassProps.Address,PasswordChangeInProcess')}}"
 
   tasks:
-   - debug: msg="the value of password is {{password_object.password}}  userName={{password_object.passprops.username}} address={{password_object.passprops.address}} passwordchangeinprocess={{password_object.passwordchangeinprocess}} inventory_hostname={{inventory_hostname}} ansible_hostname={{ansible_hostname}}"
+    - debug: 
+        msg: '{{ item }}'
+      with_cyberarkpassword:
+        appid: 'app_ansible'
+        query: 'safe=CyberArk_Passwords;folder=root;object=AdminPass'
+        output: 'Password,PassProps.UserName,PassProps.Address,PasswordChangeInProcess'
+
+    - debug: 
+        msg: '{{ lookup("cyberarkpassword", {"appid": "app_ansible", "query": "safe=CyberArk_Passwords;folder=root;object=AdminPass", "output": "Password,PassProps.UserName,PassProps.Address,PasswordChangeInProcess"}) }}'
+   
