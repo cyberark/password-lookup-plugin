@@ -49,11 +49,7 @@ If the specified property does not exist for this password, the value <na> will 
 
 If the value of the specified property is empty, <null> will be returned.
 
-
-for extra_parms values please check parameters for clipasswordsdk in CyberArk's "Credential Provider and ASCP Implementation Guide"
-
-For Ansible on Windows, please change the -parameters (`-p`, `-d`, and `-o`) to `/parameters` (`/p`, `/d`, and `/o`) and change the location of `CLIPasswordSDK.exe`
-
+For extra_parms values please check parameters for clipasswordsdk in CyberArk's "Credential Provider and ASCP Implementation Guide"
 
 Example Playbook
 ----------------
